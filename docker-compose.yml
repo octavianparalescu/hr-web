@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  react:
+    image: library/node:${NODE_VERSION}
+    working_dir: /home/node/app
+    volumes:
+      - ./app:/home/node/app
+    restart: "always"
+    command: npm start
+    ports:
+      - "${FRONTEND_PORT}:3000"

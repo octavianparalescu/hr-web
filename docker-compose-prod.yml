@@ -1,0 +1,25 @@
+version: "3.8"
+services:
+  react-install-prod:
+    image: library/node:${NODE_VERSION}
+    working_dir: /home/node/app
+    volumes:
+      - ./app:/home/node/app
+    restart: "no"
+    command: bash -c "npm install"
+  react-build-prod:
+    image: library/node:${NODE_VERSION}
+    working_dir: /home/node/app
+    volumes:
+      - ./app:/home/node/app
+    restart: "no"
+    command: bash -c "npm run build"
+  react-serve-prod:
+    image: library/node:${NODE_VERSION}
+    working_dir: /home/node/app
+    volumes:
+      - ./app:/home/node/app
+    restart: "always"
+    command: bash -c "npx serve -s build"
+    ports:
+      - "${FRONTEND_PORT}:5000"
