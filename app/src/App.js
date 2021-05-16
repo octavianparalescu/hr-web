@@ -39,7 +39,7 @@ export default function App() {
                     render={() => {
                         return (
                             isAuth ?
-                                <Redirect to="/employees"/> :
+                                <Redirect to="/departments"/> :
                                 <Redirect to="/login"/>
                         );
                     }}
