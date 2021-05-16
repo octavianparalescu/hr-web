@@ -1,7 +1,7 @@
 import React from "react";
 import useAuthentication from "./useAuthentication";
-import { render, unmountComponentAtNode } from "react-dom";
-import { act } from "react-dom/test-utils";
+import {render, unmountComponentAtNode} from "react-dom";
+import {act} from "react-dom/test-utils";
 
 function TestComponent() {
     const {isAuth} = useAuthentication();

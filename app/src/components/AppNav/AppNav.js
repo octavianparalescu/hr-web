@@ -14,7 +14,8 @@ function AppNav() {
                 {authStatus.isAuth ?
                     <>
                         <Nav.Link as={Link} to="/departments">Departments</Nav.Link>
-                        <Nav.Link as={Link} to="/departments/high-earning">Departments with 2 salaries over 50k</Nav.Link>
+                        <Nav.Link as={Link} to="/departments/high-earning">Departments with 2 salaries over
+                            50k</Nav.Link>
                     </>
                     :
                     <>

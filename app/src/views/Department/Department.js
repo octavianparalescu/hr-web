@@ -15,7 +15,7 @@ function Department() {
 
     useEffect(() => {
         axiosInstance.get('/department?include_max_salary=1', {headers: auth.authHeaders}).then((result) => {
-            setDepartments(result.data)
+            setDepartments(result.data);
         }).catch((reason) => {
             if (reason.response?.status === 401) {
                 auth.resetAuth();
@@ -29,8 +29,8 @@ function Department() {
 
     return <>
         {!info || <Info {...info}/>}
-        <CreateDepartment addDepartmentFn={addDepartmentFn} />
-        {!departments || <ListDepartments departments={departments} />}
+        <CreateDepartment addDepartmentFn={addDepartmentFn}/>
+        {!departments || <ListDepartments departments={departments}/>}
     </>;
 }
 

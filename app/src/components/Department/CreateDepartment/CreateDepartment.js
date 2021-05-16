@@ -30,7 +30,8 @@ function CreateDepartment({addDepartmentFn}) {
             <h2>Create Department</h2>
             <Form.Group controlId="departmentName">
                 <Form.Label>Department Name</Form.Label>
-                <Form.Control required name="name" type="text" placeholder="Enter department name" onChange={updateFormData}/>
+                <Form.Control required name="name" type="text" placeholder="Enter department name"
+                              onChange={updateFormData}/>
             </Form.Group>
             <Button variant="primary" type="submit" onClick={submit}>
                 Submit

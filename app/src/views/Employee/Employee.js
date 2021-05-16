@@ -38,7 +38,7 @@ function Employee() {
 
     return <>
         {!info || <Info {...info}/>}
-        {!departmentData || <CreateEmployee addEmployeeFn={addEmployeeFn} departmentId={departmentData.id}/> }
+        {!departmentData || <CreateEmployee addEmployeeFn={addEmployeeFn} departmentId={departmentData.id}/>}
         {!employees || <ListEmployees employees={employees} departmentData={departmentData}/>}
     </>;
 }

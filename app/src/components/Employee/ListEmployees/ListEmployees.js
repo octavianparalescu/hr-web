@@ -1,6 +1,5 @@
 import React from 'react';
 import {Table} from "react-bootstrap";
-import {Link} from "react-router-dom";
 
 function ListEmployees({employees, departmentData}) {
     return <>

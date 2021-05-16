@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import useFormData from "../../../effects/Form/useFormData";
 import useAuthentication from "../../../effects/Auth/useAuthentication";
 import {axiosInstance} from "../../../reusable/axios";
@@ -30,15 +30,18 @@ function CreateEmployee({addEmployeeFn, departmentId}) {
             <h2>Create Employee</h2>
             <Form.Group controlId="firstName">
                 <Form.Label>Employee First Name</Form.Label>
-                <Form.Control required name="first_name" type="text" placeholder="Enter employee first name" onChange={updateFormData}/>
+                <Form.Control required name="first_name" type="text" placeholder="Enter employee first name"
+                              onChange={updateFormData}/>
             </Form.Group>
             <Form.Group controlId="lastName">
                 <Form.Label>Employee Last Name</Form.Label>
-                <Form.Control required name="last_name" type="text" placeholder="Enter employee last name" onChange={updateFormData}/>
+                <Form.Control required name="last_name" type="text" placeholder="Enter employee last name"
+                              onChange={updateFormData}/>
             </Form.Group>
             <Form.Group controlId="salary">
                 <Form.Label>Salary</Form.Label>
-                <Form.Control required name="salary" type="text" placeholder="Enter employee salary" onChange={updateFormData}/>
+                <Form.Control required name="salary" type="text" placeholder="Enter employee salary"
+                              onChange={updateFormData}/>
             </Form.Group>
             <Button variant="primary" type="submit" onClick={submit}>
                 Submit
